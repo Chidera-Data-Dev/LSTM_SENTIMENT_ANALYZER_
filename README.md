@@ -18,16 +18,11 @@ The trained model is exposed through a **FastAPI REST API** and connected to a *
 
 User Input → Streamlit → FastAPI → LSTM Model → Sentiment Prediction
 
-## Recommendations & Future Improvements
+## Recommendations
 
-The current model provides a solid baseline for sentiment classification. Future improvements could include:
+The current model provides a solid baseline for sentiment classification. Future improvements could include experimenting with pretrained embeddings, alternative NLP architectures, additional preprocessing techniques, and a larger training dataset.
 
-- Experimenting with pretrained word embeddings.
-- Testing more advanced NLP architectures.
-- Improving text preprocessing.
-- Training with a larger and more diverse dataset.
-- Monitoring real-world predictions to identify areas for improvement.
-
+The deployed application provides a foundation for testing the model with real user inputs and identifying areas for future improvement.
 ## Technologies
 
 - Python
