@@ -19,7 +19,7 @@ The trained model is exposed through a **FastAPI REST API** and connected to a *
 User Input → Streamlit → FastAPI → LSTM Model → Sentiment Prediction
 
 ### Deployed App
-[App](https://lstm-sentiment-analyzer-1.streamlit.app/)
+See App Here ---> [App](https://lstm-sentiment-analyzer-1.streamlit.app/)
 
 ## Recommendations
 
@@ -36,4 +36,5 @@ The deployed application provides a foundation for testing the model with real u
 - Streamlit
 - Uvicorn
 
+### Dataset
 [DATASET LINK](https://www.kaggle.com/datasets/mwallerphunware/imbd-movie-reviews-for-binary-sentiment-analysis)
