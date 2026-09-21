@@ -42,7 +42,7 @@ def preprocess(text):
     text = " ".join(tokens)
 
     # Tokenize using our downloaded Tokenizer
-    X = tokenizer.texts_to_sequences(text)
+    X = tokenizer.texts_to_sequences([text])
 
     # Padding
     padded_text = pad_sequences(X, maxlen = 310,  padding = 'post', truncating = 'post')
@@ -53,12 +53,5 @@ def preprocess(text):
 
 # Prediction Function
 def predict_sentiment(processed_text):
-    prediction = model.predict(processed_text)
-    sentiment = int(prediction[0][0] >= 0.5)
-
-    if sentiment == 1:
-        sentiment = "Positive"
-    else:
-        sentiment = "Negative"
-
-    return sentiment
+    score = float(model.predict(processed_text, verbose=0)[0][0])
+    return "Positive" if score >= 0.5 else "Negative"
