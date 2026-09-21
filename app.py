@@ -61,7 +61,9 @@ if text.strip() == "":
         st.warning("Please enter some text before clicking predict.")
 else:
         payload = {"text": text}
-        st.info("Processing your text...")
+        processing = st.info("Processing your text...")
         response = predict_sentiment(payload=payload).json()
+        processing.empty()
         sentiment = response.get("sentiment").casefold()
+        st.success("Done! Analysis complete.")
         st.markdown(f"You have a {sentiment} sentiment")
